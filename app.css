@@ -1,0 +1,74 @@
+/* Floating animation for points */
+.floating-animation {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4caf50; /* Green color */
+  animation: moveUpFadeOut 1s ease-in-out forwards;
+}
+
+/* Keyframes for floating effect */
+@keyframes moveUpFadeOut {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50px); /* Move up by 50px */
+    opacity: 0;
+  }
+}
+
+/* Fixed Tabs at the Bottom */
+.fixed-tabs {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Style for Tab Buttons */
+.tab-button {
+  background-color: #ffffff;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.tab-button:active {
+  transform: scale(0.95);
+}
+
+/* Notification Banner */
+.notification-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  color: red;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 999;
