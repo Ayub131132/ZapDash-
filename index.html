@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zapdash</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Notification Banner -->
+  <div id="notificationBanner" class="notification-banner" style="display: none;">
+    Referral link copied!
+  </div>
+
+  <!-- Main Content -->
+  <div id="app">
+    <!-- Home Tab -->
+    <div id="homeTab" class="tab-content">
+      <div class="points-section">
+        Total Balance: <strong id="points">0 points</strong>
+      </div>
+      <div class="image-wrapper" onclick="incrementPoints()">
+        <img
+          src="https://lh3.googleusercontent.com/pw/AP1GczMpzSUAzdCaUh9Yf-P1Z0epzBUxKNs9Ga99ofCJeBMfUnV3pK8FUl_YMoS38vMqFS1oLK5TTzuVZbSW3CBPIddx9MZ0KziEpr5u42mFX_R8cvVzaRmPeQgrmRl0PGBMg5MB18Z19V1Hcd70ZxN1avpS=w721-h721-s-no-gm?authuser=0"
+          alt="Clickable Reward"
+        />
+        <div id="animations"></div>
+      </div>
+    </div>
+
+    <!-- Tasks Tab -->
+    <div id="tasksTab" class="tab-content" style="display: none;">
+      <h2>Complete Tasks to Earn 100K Points</h2>
+      <div class="task-item">
+        <div class="task-text">Join the Telegram channel</div>
+        <a href="https://t.me/zapdashcommunity" target="_blank" rel="noopener noreferrer">
+          <button onclick="completeTask('Join Telegram Channel')" class="task-button">
+            Complete Task
+          </button>
+        </a>
+      </div>
+      <!-- Add more tasks here -->
+    </div>
+
+    <!-- Friends Tab -->
+    <div id="friendsTab" class="tab-content" style="display: none;">
+      <h2>Invite Friends to Earn 100K Points!</h2>
+      <p>
+        Share this referral link with your friends to earn 100K points:
+        <br />
+        <strong id="referralLink"></strong>
+      </p>
+      <button onclick="copyReferralLink()" class="copy-referral-button">Copy Referral Link</button>
+    </div>
+  </div>
+
+  <!-- Fixed Navigation Tabs -->
+  <div class="fixed-tabs">
+    <button onclick="switchTab('home')" class="tab-button">Home</button>
+    <button onclick="switchTab('tasks')" class="tab-button">Earn</button>
+    <button onclick="switchTab('friends')" class="tab-button">Friends</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
